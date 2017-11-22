@@ -1,0 +1,333 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:800|Open+Sans:400,600,700i');
+
+body {
+	font-family: 'Open Sans', sans-serif;
+}
+
+$black: #000000;
+$white: #FFFFFF;
+$red: #a01626;
+$blue: #0c79ff;
+$gray: #626262;
+$gray-light: #e4e6eb;
+
+@mixin smooth {
+  transition: all .3s;
+  -moz-transition: all .3s;
+  -webkit-transition: all .3s;
+  -o-transition: all .3s;
+  -ms-transition:all .3s;
+}
+a {
+	@include smooth;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Montserrat', sans-serif;
+}
+
+p {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 0.875rem;
+	b {
+		font-family: 'Montserrat', sans-serif;
+		text-transform: uppercase;
+	}
+	span {
+		color: $blue;
+	}
+	&.big {
+		font-size: 1.275rem;
+	}
+}
+.blue {
+	color: $blue;
+}
+.gray {
+	color: $gray;
+}
+
+.button {
+	background-color: $blue;
+	border-radius: 4px;
+	&.outline {
+		background-color: transparent;
+		border: 1px solid $blue;
+		color: $blue;
+	}
+	&:hover {
+		background-color: $blue;
+		color: $white;
+	}
+	&.white {
+		border-color: $white;
+		color: $white;
+		&:hover {
+			background-color: $white;
+			color: $gray;
+		}
+	}
+}
+
+.top-bar {
+	background-color: rgba(21, 21, 21, 0.5);
+	padding: 0.35rem 0;
+	ul {
+		background-color: transparent;
+	}
+	.menu {
+		.is-active {
+			> a {
+				color: $blue;
+			}
+		}
+		a {
+			text-transform: uppercase;
+			&:hover {
+				&:not(.button) {
+					background-color: transparent;
+					color: $blue;
+				}
+			}
+		}
+		 > li {
+		 	background-color: transparent;
+		 	&:not(:last-child) {
+		 		border: none;
+		 	}
+		 }
+	}
+}
+
+.header-up {
+	background-color: $black;
+	a {
+		color: rgba($white, 0.85);
+		font-size: 0.75rem;
+		margin: 0 0.35rem;
+		font-weight: 700;
+		i {
+			font-size: 1rem;
+			vertical-align: middle;
+		}
+		&:hover {
+			color: rgba($white, 1);
+		}
+	}
+	.feat {
+		background-color: $red;
+		display: inline-block;
+		@include smooth;
+		a {
+			display: block;
+			padding: 0.45rem 0.75rem;
+		}
+		&:hover {
+			background-color: darken($red, 5%);
+		}
+	}
+}
+.site-header {
+	position: fixed;
+	width: 100%;
+	top: 0;
+	z-index: 9999;
+	.site-navigation {
+		.top-bar-left {
+			.site-desktop-title {
+				a {
+					img {
+						max-width: 180px;
+					}
+				}
+			}
+		}
+	}
+}
+
+.orbit-caption {
+    bottom: 41%;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    background-color: transparent;
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+	span {
+		color: $blue;
+	}
+}
+.orbit-controls {
+	i {
+		font-size: 1.5rem;
+	}
+}
+
+#slider {
+	position: relative;
+	p {
+		color: $white;
+		font-size: 1.25rem;
+		margin-top: 0.5rem;
+	}
+	.claim-free-pass-form {
+		position: absolute;
+		width: 100%;
+		bottom: 0;
+		background-color: rgba($blue, 0.8);
+		padding-top: 1rem;
+		padding-bottom: 1rem;
+		p {
+			b {
+				font-family: 'Open Sans', sans-serif;
+				font-weight: 700;
+				font-style: italic;
+			}
+		}
+		input {
+			margin: 0;
+			border: none;
+			border-radius: 4px;
+			padding-left: 2rem;
+			position: relative;
+			font-size: 0.875rem;
+			&::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+			  color: $blue;
+			}
+			&::-moz-placeholder { /* Firefox 19+ */
+			  color: $blue;
+			}
+			&:-ms-input-placeholder { /* IE 10+ */
+			  color: $blue;
+			}
+			&:-moz-placeholder { /* Firefox 18- */
+			  color: $blue;
+			}
+		}
+		input[type="submit"] {
+			background-color: transparent;
+			border: 1px solid $white;
+			color: $white;
+			padding: 0.5rem 1rem;
+			height: 2.4375rem;
+			width: 100%;
+			cursor: pointer;
+			font-size: 0.975rem;
+			@include smooth;
+			&:hover {
+				background-color: $white;
+				color: $blue;
+			}
+		}
+		.ajax-loader {
+			position: absolute;
+			opacity: 0;
+		}
+		.your-name {
+			position: relative;
+			&:before {
+				content: '\f007';
+				font-family: FontAwesome;
+				display: block;
+				position: absolute;
+				z-index: 1;
+				font-size: 1rem;
+				margin: 0.5rem 0 0.5rem 0.725rem;
+				line-height: 1.5rem;
+				color: $blue;
+			}
+		}
+		.your-email {
+			position: relative;
+			&:before {
+				content: '\f0e0';
+				font-family: FontAwesome;
+				display: block;
+				position: absolute;
+				z-index: 1;
+				font-size: 1rem;
+				margin: 0.5rem 0 0.5rem 0.725rem;
+				line-height: 1.5rem;
+				color: $blue;
+			}
+		}
+	}
+}
+
+#about {
+	background-color: $gray-light;
+	padding: 6rem 0;
+	.title {
+		border-left: 10px solid $blue;
+		padding-left: 1rem;
+		font-size: 1.25rem;
+		margin-bottom: 2rem;
+		b {
+			font-family: 'Montserrat', sans-serif;
+		}
+	}
+	p {
+		text-align: justify;
+	}
+	.button {
+		padding-left: 2.5rem;
+		padding-right: 2.5rem;
+	}
+}
+
+#groups {
+	background-image: url(../../../src/assets/images/bg-groups.jpg);
+	background-size: cover;
+	background-attachment: fixed;
+	.group-x {
+		padding-top: 4rem;
+		padding-bottom: 2rem;
+		color: $white;
+		.button {
+			margin-top: 1rem;
+			transform: translateY(0px);
+			@include smooth;
+			&:hover {
+				transform: translateY(-5px);
+			}
+		}
+	}
+	.classes {
+		background-color: rgba($blue, 0.8);
+		padding: 4rem 0;
+		.box {
+			overflow: hidden;
+			background-size: cover;
+			@include smooth;
+			&.crossfit {
+				background-image: url(../../../src/assets/images/crossfit.jpg);
+			}
+			&.training {
+				background-image: url(../../../src/assets/images/training.jpg);
+			}
+			&.youthfitzone {
+				background-image: url(../../../src/assets/images/youthfitzone.jpg);
+			}
+			&:hover {
+				box-shadow: 0 0 25px rgba($black, 0.6);
+				.over {
+					transform: translateY(0%);
+				}
+			}
+			.over {
+				background-color: rgba($red, 0.75);
+				color: $white;
+				padding: 1rem 2rem;
+				transform: translateY(75%);
+				height: 18rem;
+				@include smooth;
+				h4 {
+					margin-bottom: 2rem;
+				}
+				p {
+					margin-bottom: 2.5rem;
+				}
+			}
+		}
+	}
+}
