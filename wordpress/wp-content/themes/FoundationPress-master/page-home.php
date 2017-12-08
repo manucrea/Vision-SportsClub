@@ -42,7 +42,7 @@
 						<p>Be <b>stronger</b> than your excuses</p>
 					</div>
 					<div class="auto cell">
-						<?php echo do_shortcode( '[contact-form-7 id="15" title="claim-free-pass"]' ); ?>
+						<?php echo do_shortcode( '[contact-form-7 id="89" title="claim-free-pass"]' ); ?>
 					</div>
 				</div>
 			</div>
@@ -137,8 +137,34 @@
 
 	<section id="news">
 		<div class="grid-container">
-			<div class="grid-x grid-padding-x align-middle">
+			<div class="grid-x grid-padding-x align-middle align-center">
+				<div class="small-12 medium-6 large-6 cell">
+					<h3>FEATURED</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+					
+					<?php if (have_posts()) : ?>
+						<?php while (have_posts()) : the_post(); ?>
+					    <div class="post">
+					    	<div id="post-<?php the_ID(); ?>">
+								<a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>">
+							     	<small><?php the_time('m-d-Y') ?></small>
+									<h4><?php the_title(); ?></h4>
+									<?php the_excerpt(); ?>
+								</a>
+							</div>
+					    </div>
+					    <?php endwhile; ?>
+					<?php endif; ?>
 
+					<ul>
+						<li>
+							
+						</li>
+					</ul>
+
+
+				</div>
+				<div class="small-12 medium-6 large-6 cell"></div>
 			</div>
 		</div>
 	</section>
