@@ -22,13 +22,13 @@
 		    <ul class="orbit-container">
 		      <li class="is-active orbit-slide">
 		        <figure class="orbit-figure">
-		          <img class="orbit-image" src="<?php echo get_stylesheet_directory_uri(); ?>/src/assets/images/slider1.jpg" alt="Space">
+		          <img class="orbit-image" src="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/images/slider1.jpg" alt="Space">
 		          <figcaption class="orbit-caption">the body achieves <br> what the <span>mind believes</span></figcaption>
 		        </figure>
 		      </li>
 		      <li class="orbit-slide">
 		        <figure class="orbit-figure">
-		          <img class="orbit-image" src="<?php echo get_stylesheet_directory_uri(); ?>/src/assets/images/slider2.jpg" alt="Space">
+		          <img class="orbit-image" src="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/images/slider2.jpg" alt="Space">
 		          <figcaption class="orbit-caption">the body achieves <br> what the <span>mind believes</span></figcaption>
 		        </figure>
 		      </li>
@@ -65,7 +65,7 @@
 				</div>
 				<div class="auto cell">
 					<div class="text-center">
-						<img src="<?php echo get_stylesheet_directory_uri(); ?>/src/assets/images/woman-jump.png" alt=" ">
+						<img src="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/images/woman-jump.png" alt=" ">
 					</div>
 				</div>
 			</div>
@@ -104,7 +104,7 @@
 								<p>
 									Is a Personal Training and Strength & Conditioning program that develops individuals, athletes & teams to reach new levels of health and fitness through our unique training style. 
 								</p>
-								<a class="button outline white" href="#">Free 3 days trial</a>
+								<a class="button outline" href="#">Free 3 days trial</a>
 							</div>
 						</div>
 					</div>
@@ -115,7 +115,7 @@
 								<p>
 									Our certified and experienced Personal Training staff is dedicated to providing each client with a customized and comprehensive plan to reach his or her fitness goals.
 								</p>
-								<a class="button outline white" href="#">Schedule</a>
+								<a class="button outline" href="#">Schedule</a>
 							</div>
 						</div>
 					</div>
@@ -126,7 +126,7 @@
 								<p>
 									Vision Sports Club is the only health club in the Rockland County area to offer a dedicated, comprehensive youth fitness section.
 								</p>
-								<a class="button outline white" href="#">Contact Us</a>
+								<a class="button outline" href="#">Contact Us</a>
 							</div>
 						</div>
 					</div>
@@ -137,34 +137,165 @@
 
 	<section id="news">
 		<div class="grid-container">
-			<div class="grid-x grid-padding-x align-middle align-center">
+			<div class="grid-x grid-padding-x grid-padding-y align-center">
 				<div class="small-12 medium-6 large-6 cell">
 					<h3>FEATURED</h3>
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
-					
-					<?php if (have_posts()) : ?>
-						<?php while (have_posts()) : the_post(); ?>
-					    <div class="post">
-					    	<div id="post-<?php the_ID(); ?>">
-								<a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>">
-							     	<small><?php the_time('m-d-Y') ?></small>
-									<h4><?php the_title(); ?></h4>
-									<?php the_excerpt(); ?>
-								</a>
-							</div>
-					    </div>
-					    <?php endwhile; ?>
-					<?php endif; ?>
-
-					<ul>
+					<ul class="news-list no-bullet">
 						<li>
-							
+							<a href="#">
+								<div class="grid-x grid-padding-x align-middle align-center">
+									<div class="small-12 medium-4 cell">
+										<img src="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/images/news-1.png" alt=" ">
+									</div>
+									<div class="small-12 medium-8 cell">
+										<span class="meta">10/10/2017</span>
+										<h5>SPORTS PERFORMANCE</h5>
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+									</div>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="grid-x grid-padding-x align-middle align-center">
+									<div class="small-12 medium-4 cell">
+										<img src="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/images/news-2.png" alt=" ">
+									</div>
+									<div class="small-12 medium-8 cell">
+										<span class="meta">10/10/2017</span>
+										<h5>NUTRITION</h5>
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+									</div>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="grid-x grid-padding-x align-middle align-center">
+									<div class="small-12 medium-4 cell">
+										<img src="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/images/news-3.png" alt=" ">
+									</div>
+									<div class="small-12 medium-8 cell">
+										<span class="meta">10/10/2017</span>
+										<h5>PARTIES</h5>
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+									</div>
+								</div>
+							</a>
 						</li>
 					</ul>
-
-
 				</div>
-				<div class="small-12 medium-6 large-6 cell"></div>
+				<div class="small-12 medium-6 large-6 cell">
+					<h3>VISION NEWS AND EVENTS</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+					<ul class="events-list no-bullet">
+						<li>
+							<div class="grid-x grid-padding-x align-middle align-center">
+								<div class="small-2 cell text-center">
+									<h3>21</h3>
+									<h5>OCT</h5>
+								</div>
+								<div class="auto cell">
+									<a href="#">
+										<h5>CROSSFIT CHALLENGE</h5>
+										<span class="meta">10/10/2017</span>
+									</a>
+								</div>
+								<div class="small-3 cell">
+									<a href="#">
+										<div class="icon-calendar">
+											<div class="type">
+												<i class="fa fa-calendar-o" aria-hidden="true"></i>
+											</div>
+											<div class="txt">
+												Add to <br>Calendar
+											</div>
+										</div>
+									</a>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="grid-x grid-padding-x align-middle align-center">
+								<div class="small-2 cell text-center">
+									<h3>21</h3>
+									<h5>OCT</h5>
+								</div>
+								<div class="auto cell">
+									<a href="#">
+										<h5>CROSSFIT CHALLENGE</h5>
+										<span class="meta">10/10/2017</span>
+									</a>
+								</div>
+								<div class="small-3 cell">
+									<a href="#">
+										<div class="icon-calendar">
+											<div class="type">
+												<i class="fa fa-calendar-o" aria-hidden="true"></i>
+											</div>
+											<div class="txt">
+												Add to <br>Calendar
+											</div>
+										</div>
+									</a>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="grid-x grid-padding-x align-middle align-center">
+								<div class="small-2 cell text-center">
+									<h3>21</h3>
+									<h5>OCT</h5>
+								</div>
+								<div class="auto cell">
+									<a href="#">
+										<h5>CROSSFIT CHALLENGE</h5>
+										<span class="meta">10/10/2017</span>
+									</a>
+								</div>
+								<div class="small-3 cell">
+									<a href="#">
+										<div class="icon-calendar">
+											<div class="type">
+												<i class="fa fa-calendar-o" aria-hidden="true"></i>
+											</div>
+											<div class="txt">
+												Add to <br>Calendar
+											</div>
+										</div>
+									</a>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="grid-x grid-padding-x align-middle align-center">
+								<div class="small-2 cell text-center">
+									<h3>21</h3>
+									<h5>OCT</h5>
+								</div>
+								<div class="auto cell">
+									<a href="#">
+										<h5>CROSSFIT CHALLENGE</h5>
+										<span class="meta">10/10/2017</span>
+									</a>
+								</div>
+								<div class="small-3 cell">
+									<a href="#">
+										<div class="icon-calendar">
+											<div class="type">
+												<i class="fa fa-calendar-o" aria-hidden="true"></i>
+											</div>
+											<div class="txt">
+												Add to <br>Calendar
+											</div>
+										</div>
+									</a>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
 			</div>
 		</div>
 	</section>
